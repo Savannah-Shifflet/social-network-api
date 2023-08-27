@@ -39,8 +39,10 @@ Additionally, this code uses node.js packages which can be installed by running 
     npm install 
 
 ## Usage
-After installing this application, the database can be created using the seed.js file by running `npm run seed `. The server can be started and the functionality can be seen by using Insomnia. A video tutorial can be found [here]() and below.
+After installing this application, the database can be created using the seed.js file by running `npm run seed `. The server can be started and the functionality can be seen by using Insomnia. A video tutorial can be found [here](https://drive.google.com/file/d/1Qf-4p8roLaS4THqSTEsvYhHJamDqihia/view) and below.
 
+
+[social-network-api.webm](https://github.com/Savannah-Shifflet/social-network-api/assets/106942356/f3c4f5d1-8ea8-4d84-8622-f0f993b90604)
 
 ## Credits
 
