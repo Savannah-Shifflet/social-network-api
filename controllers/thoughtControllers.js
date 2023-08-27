@@ -39,7 +39,7 @@ module.exports = {
                 return res.status(404).json({ message: 'Thought created, but found no user with that ID' });
             }
 
-            res.status(200).json(`Created the thought: \n ${thought}`);
+            res.status(200).json(`Created the thought: ${thought}`);
         }catch(err){
             res.status(500).json(err);
         }
@@ -88,14 +88,14 @@ module.exports = {
     // create a reaction stored in a single thought's reactions array field
     async createReaction(req, res){
         try{
-            const reaction = await Thought.findByIdAndUpdate(
+            const reaction = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
                 { $addToSet: { reactions: req.body }},
                 { runValidators: true, new: true }
             );
 
             if(!reaction){
-                return res.status(404).json({ message: 'No video with this id!' }); 
+                return res.status(404).json({ message: 'No thought with this id!' }); 
             }
 
             res.status(200).json(reaction);
